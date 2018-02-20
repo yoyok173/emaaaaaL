@@ -1,13 +1,13 @@
 <?php
 /*
-copyright @ medantechno.com
-Modified by Ilyasa
-2017
+copyright @ emaaL
+Modified by emaaL
+2018
 */
 require_once('./line_class.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //Your Channel Access Token
-$channelSecret = 'YOUR-CHANNEL-SECRET';//Your Channel Secret
+$channelAccessToken = 'OWULeWgkD3lt8VWOlTTWCY0INhEmt/P4ezDbIwhU9QhcNcLoSYictfrhKx+n7gk4KlRqghCYhZH0x+l67Acpl1rHLCsnGYCImQ7nYaCJbZpO/kKvlpZwJOm+rGiGiS+VL4T837ZQ+nJCA0r6C3Gq3AdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
+$channelSecret = 'a7965f4772f730d45caa83025ddb6245';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -25,7 +25,7 @@ if($message['type']=='sticker')
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Terima Kasih Stikernya.'										
+										'text' => 'Terima Kasih kak Stikernya.'										
 									
 									)
 							)
@@ -34,7 +34,7 @@ if($message['type']=='sticker')
 }
 else
 $pesan=str_replace(" ", "%20", $pesan_datang);
-$key = 'YOUR-API-KEY-SIMSIMI'; //API SimSimi
+$key = 'd6662bf9-7830-4ea7-826a-3ca2ddfb15a1'; //API SimSimi
 $url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
@@ -49,7 +49,7 @@ if($url['result'] == 404)
 							'messages' => array(
 								array(
 										'type' => 'text',					
-										'text' => 'Mohon Gunakan Bahasa Indonesia Yang Benar :D.'
+										'text' => 'Gunakan Bahasa Indonesia Yang Benar dong kak :D.'
 									)
 							)
 						);
