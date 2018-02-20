@@ -1,2 +1,0 @@
-# emaaaaaL
-bot simisimi
